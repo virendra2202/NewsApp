@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>News</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+    
+<body>
+        
+<div id="newsListPage" data-role="page" >
+
+<div data-role="header">
+ <div class="ui-grid-b">
+    <div class="ui-block-a">
+     <select name="select-native-11" id="select-native-11">
+        <option value="#">Setting</option>
+        <option value="#">One</option>
+        <option value="#">Two</option>
+        <option value="#">Three</option>
+      </select>	
+	</div>
+	<div class="ui-block-b">
+	 <h1>News</h1>	
+	</div>
+	<div class="ui-block-c"> 
+     <select name="select-native-11" id="city">
+	  <option>City</option>
+      </select>		
+	</div>
+ </div>  
+</div>
+  
+	<div data-role="content">
+	   <h2>Latest News</h2>	
+         <ul id="newsList" data-role="listview"></ul>
+    </div>	
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/citynewsListPage.js"></script>
+<script src="js/city.js"></script>
+<script>
+
+$(document).ready(function(){
+
+$("#city").change(function(){
+ if(document.getElementById("city").value!="blank"){
+window.open ("city.html?city=" + document.getElementById("city").value+'&page=index&callback=?',"_self");
+}
+});
+ 
+});
+
+</script>
+</body>
+
+</html>

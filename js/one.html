@@ -1,0 +1,15 @@
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+Name:
+<input type="text" id="txtName" name="Name" value="" /><br />
+
+
+<input type="button" id="btnQueryString" value="Send" />
+<script type="text/javascript">
+    $(function () {
+        $("#btnQueryString").bind("click", function () {
+            var url = "two.html?id=" + encodeURIComponent($("#txtName").val());
+            window.location.href = url;
+        });
+    });
+</script>
